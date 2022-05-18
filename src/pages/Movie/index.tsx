@@ -12,7 +12,9 @@ export const Movie = () => {
   const { id } = useParams();
 
   const movies = useSelector((state: RootState) => state.movies.movies);
-  const movie = movies.find((movie) => id && movie.id === parseInt(id));
+  const movie = movies.find(
+    (movieToFind) => id && movieToFind.id === parseInt(id, 10)
+  );
 
   useEffect(() => {
     if (id) appDispatch(getMovie(id));

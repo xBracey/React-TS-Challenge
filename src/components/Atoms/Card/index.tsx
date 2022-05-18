@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IMovie } from "../../../types/movies";
 import Stars from "../../Molecules/Stars";
-import Star from "../Star";
-import { getStarState } from "./helpers/getStarState";
 import styles from "./index.module.scss";
 
 interface ICard {

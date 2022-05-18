@@ -1,5 +1,5 @@
 import { APIStatus, IReducer } from "../../type";
-import { Movies } from "..";
+import { Movies } from "../types";
 import { findMovies } from "../../../actions/movies";
 
 export const findMoviesReducer: IReducer<Movies, typeof findMovies> = {

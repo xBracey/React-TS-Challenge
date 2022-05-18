@@ -1,34 +1,30 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Atoms/Header";
-import Home from "./pages/Home";
-import "./global.css";
 import { Provider } from "react-redux";
+import Header from "./components/Atoms/Header";
+import HomePage from "./pages/Home";
+import "./global.css";
 import { store } from "./redux/store";
-import Movie from "./pages/Movie";
+import MoviePage from "./pages/Movie";
 
 /**
  * The starting page for your App
  */
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <Header />
-          <main>
-            <section>
-              <Routes>
-                <Route path={"/"} element={<Home />} />
-                <Route path={"/movie/:id"} element={<Movie />} />
-              </Routes>
-            </section>
-          </main>
-        </BrowserRouter>
-      </Provider>
-    );
-  }
-}
+export const App = () => (
+  <Provider store={store}>
+    <BrowserRouter>
+      <Header />
+      <main>
+        <section>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/movie/:id" element={<MoviePage />} />
+          </Routes>
+        </section>
+      </main>
+    </BrowserRouter>
+  </Provider>
+);
 
 export default App;

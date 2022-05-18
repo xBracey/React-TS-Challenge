@@ -1,10 +1,10 @@
-import React, { useEffect, useState, ChangeEvent } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import _ from "lodash";
 import Cards from "../../components/Molecules/Cards";
 import SearchBar from "../../components/Atoms/SearchBar";
 import { findMovies } from "../../redux/actions/movies";
 import { RootState, useAppDispatch } from "../../redux/store";
-import _ from "lodash";
 import { _resetMovies } from "../../redux/store/movies";
 
 const findMoviesDebounce = _.debounce((appDispatch: any, query: string) => {

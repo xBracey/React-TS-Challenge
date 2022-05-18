@@ -7,7 +7,7 @@ interface ISearchBar {
   placeholder?: string;
 }
 
-const SearchBar = ({ text, setText, placeholder }: ISearchBar) => {
+const SearchBar = ({ text, setText, placeholder = "" }: ISearchBar) => {
   const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     setText(event.target.value);
   };

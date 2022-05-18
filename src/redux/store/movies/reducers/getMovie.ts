@@ -1,6 +1,6 @@
 import { APIStatus, IReducer } from "../../type";
-import { Movies } from "..";
 import { getMovie } from "../../../actions/movies";
+import { Movies } from "../types";
 
 export const getMovieReducer: IReducer<Movies, typeof getMovie> = {
   pending: (state) => {

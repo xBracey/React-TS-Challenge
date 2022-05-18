@@ -5,7 +5,8 @@ import {
   Reducer,
 } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
-import { Movies, moviesInitialState, moviesSlice } from "./movies";
+import { moviesInitialState, moviesSlice } from "./movies";
+import { Movies } from "./movies/types";
 
 export type RootState = {
   movies: Movies;

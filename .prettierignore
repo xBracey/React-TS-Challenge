@@ -1,0 +1,4 @@
+src/proto/**/*.js
+src/proto/**/*.ts
+.templates/**/*.ts
+.templates/**/*.tsx

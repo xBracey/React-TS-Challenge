@@ -1,22 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { findMoviesReducer } from "./reducers/findMovies";
-import { IFullMovie } from "../../../types/movies";
 import { APIStatus } from "../type";
 import { findMovies, getMovie } from "../../actions/movies";
 import { getMovieReducer } from "./reducers/getMovie";
-
-export interface Movies {
-  findMovies: {
-    apiStatus: APIStatus;
-    errors?: string[];
-  };
-  getMovie: {
-    apiStatus: APIStatus;
-    errors?: string[];
-  };
-  movies: IFullMovie[];
-  page: number;
-}
+import { Movies } from "./types";
 
 export const moviesInitialState: Movies = {
   findMovies: {
