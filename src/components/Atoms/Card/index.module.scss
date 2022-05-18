@@ -1,0 +1,43 @@
+.CardContainer {
+  @apply bg-white border p-4 rounded-md border-gray-200 m-2 border-solid flex flex-col justify-between items-center cursor-pointer box-border;
+  transition: all 0.5s;
+  width: calc(25% - 1rem);
+}
+
+.CardContainer:hover {
+  @apply bg-gray-100;
+}
+
+.CardContainer:active {
+  @apply bg-gray-200;
+}
+
+.CardContainer h3 {
+  @apply m-2 text-center;
+}
+
+.MovieRating {
+  @apply flex items-center;
+}
+
+.VoteAverage {
+  @apply text-sm ml-2;
+}
+
+@media screen and (max-width: 1400px) {
+  .CardContainer {
+    width: calc(33% - 1rem);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .CardContainer {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .CardContainer {
+    width: 100%;
+  }
+}
