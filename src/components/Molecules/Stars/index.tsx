@@ -13,7 +13,11 @@ const Stars = ({ voteAverage }: IStars) => {
   const starsComponent = Array(5)
     .fill(0)
     .map((_, index) => (
-      <Star className={styles.Star} state={getStarState(rating, index)} />
+      <Star
+        className={styles.Star}
+        state={getStarState(rating, index)}
+        key={index}
+      />
     ));
 
   return <>{starsComponent}</>;

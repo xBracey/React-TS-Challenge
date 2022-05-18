@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import Overview from "../../components/Atoms/Overview";
 import { getMovie } from "../../redux/actions/movies";
 import { RootState, useAppDispatch } from "../../redux/store";

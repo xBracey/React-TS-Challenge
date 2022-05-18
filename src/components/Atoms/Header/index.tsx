@@ -8,8 +8,9 @@ const Header = () => {
     <header className={styles.HeaderContainer}>
       <div className={styles.HeaderInnerContainer}>
         <nav>
-          <img src={logo} alt="logo" />
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </nav>
       </div>
     </header>

@@ -8,7 +8,9 @@ interface ICards {
 }
 
 const Cards = ({ movies }: ICards) => {
-  const moviesComponent = movies.map((movie) => <Card movie={movie} />);
+  const moviesComponent = movies.map((movie) => (
+    <Card movie={movie} key={movie.id} />
+  ));
 
   return <div className={styles.CardsContainer}>{moviesComponent}</div>;
 };

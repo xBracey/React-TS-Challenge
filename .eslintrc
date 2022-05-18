@@ -32,7 +32,8 @@
     "import/prefer-default-export": 0,
     "no-shadow": 0,
     "@typescript-eslint/no-shadow": 2,
-    "react/require-default-props": 0
+    "react/require-default-props": 0,
+    "react/no-array-index-key": 0
   },
   "overrides": [
     {
