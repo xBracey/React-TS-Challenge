@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { IMovie } from "../../../types/movies";
 import Card from "../../Atoms/Card";
 import styles from "./index.module.scss";
@@ -8,7 +8,13 @@ interface ICards {
 }
 
 const Cards = ({ movies }: ICards) => {
-  const moviesComponent = movies.map((movie) => (
+  // Using useMemo is more performant than sorting the array on each render
+  const sortedMovies = useMemo(
+    () => [...movies].sort((m1, m2) => m1.title.localeCompare(m2.title)),
+    [movies]
+  );
+
+  const moviesComponent = sortedMovies.map((movie) => (
     <Card movie={movie} key={movie.id} />
   ));
 
